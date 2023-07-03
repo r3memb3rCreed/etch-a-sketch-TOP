@@ -1,349 +1,77 @@
 
 // the divs within the container will be created here to make a grid
-const rowOne = document.querySelector('.rowOne')
 
-function creatingOne() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-        rowOne.appendChild(boxes);
+const container = document.querySelector('.sketchPad');
+const eraseButton = document.querySelector('.Eraser');
 
-        for (let item of document.querySelectorAll('.rowOne div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
+
+function creatingGridOne(sizeOfGrid) {
+    const wrapThis = document.createElement('div');
+    wrapThis.classList.add('resetWrap');
+    
+    for (let i = 0; i < sizeOfGrid; i++) {
+        const row = document.createElement('div');
+        row.classList.add('grid-rows');
+        for(let p = 0; p < sizeOfGrid; p++ ) {
+            const boxes = document.createElement('div');
+            const widthAndHeight = 960/sizeOfGrid;
+            boxes.classList.add('grid-boxes');
+            boxes.style.width = `${widthAndHeight}px`;
+            boxes.style.height = `${widthAndHeight}px`;
+
+            boxes.addEventListener('mouseenter', () => {
+                boxes.style.backgroundColor = 'black';
+            })
+            row.appendChild(boxes);
         }
+        wrapThis.appendChild(row);
+    }
+    container.appendChild(wrapThis);
+
+}
+
+
+
+eraseButton.addEventListener('click', () => {
+    let newDimension = Number(prompt("What is dimensions would you like for your sketch?"))
+    
+    while (newDimension > 100) {
+        const enterADimension = Number(prompt("Pick a smaller number..."));
+    }
+    const wrapThis = document.querySelector('.resetWrap');
+    
+    if (!wrapThis) {
+        creatingGridOne(newDimension);
+    } else {
+        wrapThis.remove();
+        creatingGridOne(newDimension);
     }
 
-}
+});
 
 
 
+/*
+const reSizing = document.querySelector('.sizing');
+reSizing.style.cssText = 'display: flex; flex-direction: row; justify-content: center; gap: 40px; margin-top: 10px;'
 
-const rowTwo = document.querySelector('.rowTwo');
+const reSizingSmall = document.createElement('button');
+reSizingSmall.classList.toggle('smallButton');
+reSizingSmall.innerText = 'Small';
+reSizingSmall.style.cssText = 'height: 20px; width: 50px;'
 
-function creatingTwo() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowTwo.appendChild(boxes);
+const reSizingMedium = document.createElement('button');
+reSizingMedium.classList.toggle('mediumButton');
+reSizingMedium.innerText = 'Medium';
+reSizingMedium.style.cssText = 'height: 20px; width: 50px;'
 
-        for (let item of document.querySelectorAll('.rowTwo div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-          }
-    }
+const reSizingBig = document.createElement('button');
+reSizingBig.classList.toggle('bigButton');
+reSizingBig.innerText = 'Big';
+reSizingBig.style.cssText = 'height: 20px; width: 50px;'
 
-    
-}
+reSizing.appendChild(reSizingSmall);
+reSizing.appendChild(reSizingMedium);
+reSizing.appendChild(reSizingBig);
 
-
-
-const rowThree = document.querySelector('.rowThree');
-
-function creatingThree() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowThree.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowThree div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-          }
-    }
-
-    
-}
-
-
-
-
-const rowFour = document.querySelector('.rowFour');
-function creatingFour() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowFour.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowFour div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-          }
-    }
-
-}
-
-
-
-
-const rowFive = document.querySelector('.rowFive');
-
-function creatingFive() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowFive.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowFive div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowSix = document.querySelector('.rowSix');
-
-function creatingSix() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowSix.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowSix div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowSeven = document.querySelector('.rowSeven');
-
-function creatingSeven() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowSeven.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowSeven div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowEight = document.querySelector('.rowEight');
-
-function creatingEight() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowEight.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowEight div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowNine = document.querySelector('.rowNine');
-
-function creatingNine() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowNine.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowNine div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-const rowTen = document.querySelector('.rowTen');
-
-function creatingTen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowTen.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowTen div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowEleven = document.querySelector('.rowEleven');
-
-function creatingEleven() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowEleven.appendChild(boxes);
-    
-
-        for (let item of document.querySelectorAll('.rowEleven div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-      }
-    }
-}
-
-
-
-
-const rowTwelve = document.querySelector('.rowTwelve');
-
-function creatingTwelve() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowTwelve.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowTwelve div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-          }
-
-    }
-}
-
-
-
-
-const rowThirteen = document.querySelector('.rowThirteen');
-function creatingThirteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowThirteen.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowThirteen div')) {
-            item.addEventListener('mouseover', () => {
-              item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-          }
-    }
-}
-
-
-
-
-const rowFourteen = document.querySelector('.rowFourteen');
-
-function creatingFourteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowFourteen.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowFourteen div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowFifteen = document.querySelector('.rowFifteen');
-
-function  creatingFifteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowFifteen.appendChild(boxes);
-        
-        for (let item of document.querySelectorAll('.rowFifteen div')) {
-            item.addEventListener('mouseover', () => {
-                item.style.cssText = boxes.style.cssText + ' background-color: black;';
-            });
-        }
-    }
-}
-
-
-
-
-const rowSixteen = document.querySelector('.rowSixteen');
-
-function creatingSixteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = 'display: flex; flex: 1;';
-    
-        rowSixteen.appendChild(boxes);
-
-        for (let item of document.querySelectorAll('.rowSixteen div')) {
-          item.addEventListener('mouseover', () => {
-            item.style.cssText = boxes.style.cssText + ' background-color: black;';
-          });
-        }
-        
-    }
-}
-
-function callGrid() {
-    creatingOne();
-    creatingTwo();
-    creatingThree();
-    creatingFour();
-    creatingFive();
-    creatingSix();
-    creatingSeven();
-    creatingEight();
-    creatingNine();
-    creatingTen();
-    creatingEleven();
-    creatingTwelve();
-    creatingThirteen();
-    creatingFourteen();
-    creatingFifteen();
-    creatingSixteen();
-}
-
-callGrid();
-
+*/
