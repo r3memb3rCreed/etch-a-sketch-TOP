@@ -4,23 +4,67 @@
 }
 
 
-body {
+.contain-all {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+    flex-direction: row;
+    justify-content: space-around;
 }
-
 
 .sketchPad {
     display: flex; 
+    border: 4px solid red;
     flex-direction: column;
     background-color: white;
-    height: 960px; 
-    width: 960px;
+    height: 500px; 
+    width: 500px;
 }
 
+.control-sketch {
+    display: flex;
+    border: 4px solid red;
+    flex-direction: column;
+    background-color: lightslategray;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+
+}
+
+.control-sketch .sizeText {
+    margin-top: 10px;
+    font-weight:bold;
+    font-size: 17px;
+    color: gold;
+
+}
+
+
+
+.rowOne,
+.rowTwo,
+.rowThree,
+.rowFour,
+.rowFive,
+.rowSix,
+.rowSeven,
+.rowEight,
+.rowNine,
+.rowTen,
+.rowEleven,
+.rowTwelve,
+.rowThirteen,
+.rowFourteen,
+.rowFifteen,
+.rowSixteen {
+    display: flex; 
+    flex-direction: row; 
+    flex: 1; 
+}
+
+
+
+
+/*
 .grid-rows {
     display: flex;
     flex: 1;
@@ -32,3 +76,4 @@ body {
     border: 1px solid black;
     background-color: blueviolet;
 }
+*/
