@@ -20,7 +20,7 @@ function creatingOne() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -40,7 +40,7 @@ function creatingTwo() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -64,7 +64,7 @@ function creatingThree() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -88,7 +88,7 @@ function creatingFour() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -113,7 +113,7 @@ function creatingFive() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -136,7 +136,7 @@ function creatingSix() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -160,7 +160,7 @@ function creatingSeven() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -184,7 +184,7 @@ function creatingEight() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -208,7 +208,7 @@ function creatingNine() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -231,7 +231,7 @@ function creatingTen() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -255,7 +255,7 @@ function creatingEleven() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -278,7 +278,7 @@ function creatingTwelve() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
 
@@ -301,7 +301,7 @@ function creatingThirteen() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -324,7 +324,7 @@ function creatingFourteen() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -347,7 +347,7 @@ function  creatingFifteen() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
@@ -370,7 +370,7 @@ function creatingSixteen() {
                 boxes.style.cssText = boxStyle +'background-color: black;';
             })
             boxes.addEventListener('click', () => {
-                item.style.cssText = boxStyle;
+                boxes.style.cssText = boxStyle;
             })
         }
     }
