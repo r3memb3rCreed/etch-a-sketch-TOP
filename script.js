@@ -3,9 +3,13 @@
 
 const containAll = document.querySelector('.contain-all');
 
+const containOutputs = document.querySelector('.contain-outputs');
+
 const container = document.querySelector('.sketchPad');
 
 const rowOne = document.querySelector('.rowOne')
+
+
 
 let boxStyle = 'display: flex; flex: 1; border: 1px solid lightgray;';
 
@@ -411,13 +415,12 @@ sizingButtons.appendChild(reSizingBig);
 
 controlBox.appendChild(sizingButtons);
 
+
 function callGrid() {
     reSizingSmall.addEventListener('click', () => {
         
-        // try and delete the wrapThis node only if the containAll div actually has it as a child...Or just move on.
-        //if (containAll.childNodes())
-        //containAll.removeChild(wrapThis);
-        containAll.appendChild(container);
+    
+        containOutputs.appendChild(container);
         creatingOne();
         creatingTwo();
         creatingThree();
@@ -437,8 +440,13 @@ function callGrid() {
     })
 
     reSizingMedium.addEventListener('click', () => {
-        containAll.removeChild(container);
+        containOutputs.removeChild(container);
         creatingGridTwo();
+    })
+
+    reSizingBig.addEventListener('click', () => {
+        containOutputs.removeChild(wrapThis);
+        creatingGridThree();
     })
 
 }
@@ -450,8 +458,8 @@ const wrapThis = document.createElement('div');
 
 function creatingGridTwo() {
 
-    wrapThis.classList.add('newGrid');
-    wrapThis.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 500px; width: 500px;';
+    wrapThis.classList.add('Grid-32');
+    wrapThis.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 628px; width: 628px;';
     
     for (let i = 0; i < 32; i++) {
         const row = document.createElement('div');
@@ -464,13 +472,51 @@ function creatingGridTwo() {
             boxes.addEventListener('mouseenter', () => {
                 boxes.style.backgroundColor = 'black';
             })
+            boxes.addEventListener('click', () => {
+                boxes.style.cssText = boxStyle;
+            })
             row.appendChild(boxes);
         }
         wrapThis.appendChild(row);
     }
-    containAll.appendChild(wrapThis);
+    containOutputs.appendChild(wrapThis);
 
 }
+
+const newWrapThis = document.createElement('div');
+
+
+function creatingGridThree() {
+
+    newWrapThis.classList.add('Grid-64');
+    newWrapThis.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 628px; width: 628px;';
+    
+    for (let i = 0; i < 64; i++) {
+        const row = document.createElement('div');
+        row.classList.add('grid-rows');
+        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
+
+        for(let p = 0; p < 64; p++ ) {
+            const boxes = document.createElement('div');
+            boxes.style.cssText = boxStyle
+            boxes.addEventListener('mouseenter', () => {
+                boxes.style.backgroundColor = 'black';
+            })
+            boxes.addEventListener('click', () => {
+                boxes.style.cssText = boxStyle;
+            })
+            row.appendChild(boxes);
+        }
+        newWrapThis.appendChild(row);
+    }
+    containOutputs.appendChild(newWrapThis);
+
+}
+
+
+
+
+
 
 
 /*
