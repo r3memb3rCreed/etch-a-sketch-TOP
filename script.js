@@ -7,379 +7,100 @@ const containOutputs = document.querySelector('.contain-outputs');
 
 const container = document.querySelector('.sketchPad');
 
-const rowOne = document.querySelector('.rowOne')
 
 
 
+const createGridA = document.createElement('div');
 let boxStyle = 'display: flex; flex: 1; border: 1px solid lightgray;';
 
-function creatingOne() {
+function creatingGridOne() {
+
+    createGridA.classList.add('Grid-16');
+    createGridA.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 614px; width: 614px;';
+    
     for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-        rowOne.appendChild(boxes);
+        const row = document.createElement('div');
+        row.classList.add('grid-rows');
+        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
 
         for(let p = 0; p < 16; p++ ) {
+            const boxes = document.createElement('div');
+            boxes.style.cssText = boxStyle
             boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
+                boxes.style.backgroundColor = 'black';
             })
             boxes.addEventListener('click', () => {
                 boxes.style.cssText = boxStyle;
             })
+            row.appendChild(boxes);
         }
+        createGridA.appendChild(row);
     }
-
-}
-
-const rowTwo = document.querySelector('.rowTwo');
-
-function creatingTwo() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-        rowTwo.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-
+    containOutputs.appendChild(createGridA);
 
 }
 
 
 
-const rowThree = document.querySelector('.rowThree');
+const createGridB = document.createElement('div');
 
-function creatingThree() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
 
-        rowThree.appendChild(boxes);
+function creatingGridTwo() {
 
-        for(let p = 0; p < 16; p++ ) {
+    createGridB.classList.add('Grid-32');
+    createGridB.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 625px; width: 625px;';
+    
+    for (let i = 0; i < 32; i++) {
+        const row = document.createElement('div');
+        row.classList.add('grid-rows');
+        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
+
+        for(let p = 0; p < 32; p++ ) {
+            const boxes = document.createElement('div');
+            boxes.style.cssText = boxStyle
             boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
+                boxes.style.backgroundColor = 'black';
             })
             boxes.addEventListener('click', () => {
                 boxes.style.cssText = boxStyle;
             })
+            row.appendChild(boxes);
         }
+        createGridB.appendChild(row);
     }
-
+    containOutputs.appendChild(createGridB);
 
 }
 
+const createGridC = document.createElement('div');
 
 
+function creatingGridThree() {
 
-const rowFour = document.querySelector('.rowFour');
-function creatingFour() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
+    createGridC.classList.add('Grid-64');
+    createGridC.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 625px; width: 625px;';
+    
+    for (let i = 0; i < 64; i++) {
+        const row = document.createElement('div');
+        row.classList.add('grid-rows');
+        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
 
-        rowFour.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
+        for(let p = 0; p < 64; p++ ) {
+            const boxes = document.createElement('div');
+            boxes.style.cssText = boxStyle
             boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
+                boxes.style.backgroundColor = 'black';
             })
             boxes.addEventListener('click', () => {
                 boxes.style.cssText = boxStyle;
             })
+            row.appendChild(boxes);
         }
+        createGridC.appendChild(row);
     }
+    containOutputs.appendChild(createGridC);
 
 }
-
-
-
-
-const rowFive = document.querySelector('.rowFive');
-
-function creatingFive() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowFive.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowSix = document.querySelector('.rowSix');
-
-function creatingSix() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowSix.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowSeven = document.querySelector('.rowSeven');
-
-function creatingSeven() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowSeven.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowEight = document.querySelector('.rowEight');
-
-function creatingEight() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowEight.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowNine = document.querySelector('.rowNine');
-
-function creatingNine() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowNine.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-const rowTen = document.querySelector('.rowTen');
-
-function creatingTen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowTen.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowEleven = document.querySelector('.rowEleven');
-
-function creatingEleven() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowEleven.appendChild(boxes);
-
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowTwelve = document.querySelector('.rowTwelve');
-
-function creatingTwelve() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowTwelve.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-
-    }
-}
-
-
-
-
-const rowThirteen = document.querySelector('.rowThirteen');
-function creatingThirteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowThirteen.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowFourteen = document.querySelector('.rowFourteen');
-
-function creatingFourteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowFourteen.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowFifteen = document.querySelector('.rowFifteen');
-
-function  creatingFifteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowFifteen.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
-
-
-
-const rowSixteen = document.querySelector('.rowSixteen');
-
-function creatingSixteen() {
-    for (let i = 0; i < 16; i++) {
-        let boxes = document.createElement('div');
-        boxes.style.cssText = boxStyle;
-
-        rowSixteen.appendChild(boxes);
-
-        for(let p = 0; p < 16; p++ ) {
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.cssText = boxStyle +'background-color: black;';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-        }
-    }
-}
-
     
 
 
@@ -418,104 +139,62 @@ controlBox.appendChild(sizingButtons);
 
 function callGrid() {
     reSizingSmall.addEventListener('click', () => {
+        if(containOutputs.querySelector('.Grid-16') === null && containOutputs.querySelector('.Grid-32') === null && containOutputs.querySelector('.Grid-64') === null){
+            creatingGridOne();
+        } else if (containOutputs.querySelector('.Grid-16') === null && containOutputs.querySelector('.Grid-32') !== null ){
+            if (containOutputs.contains(createGridB)){
+                containOutputs.removeChild(createGridB);
+            }
+
+            creatingGridOne();
+        } else if (containOutputs.querySelector('.Grid-16') === null && containOutputs.querySelector('.Grid-64') !== null){
+            if (containOutputs.contains(createGridC)){
+                containOutputs.removeChild(createGridC);
+            }
+            creatingGridOne();
+        }
         
-    
-        containOutputs.appendChild(container);
-        creatingOne();
-        creatingTwo();
-        creatingThree();
-        creatingFour();
-        creatingFive();
-        creatingSix();
-        creatingSeven();
-        creatingEight();
-        creatingNine();
-        creatingTen();
-        creatingEleven();
-        creatingTwelve();
-        creatingThirteen();
-        creatingFourteen();
-        creatingFifteen();
-        creatingSixteen();
     })
 
     reSizingMedium.addEventListener('click', () => {
-        containOutputs.removeChild(container);
-        creatingGridTwo();
+        if(containOutputs.querySelector('.Grid-32') === null && containOutputs.querySelector('.Grid-16') === null && containOutputs.querySelector('.Grid-64') === null){
+            creatingGridTwo();
+        } else if (containOutputs.querySelector('.Grid-32') === null && containOutputs.querySelector('.Grid-16') !== null){
+            if (containOutputs.contains(createGridA)){
+                containOutputs.removeChild(createGridA);
+            }
+
+            creatingGridTwo();
+        } else if (containOutputs.querySelector('.Grid-32') === null && containOutputs.querySelector('.Grid-64') !== null){
+            if (containOutputs.contains(createGridC)){
+                containOutputs.removeChild(createGridC);
+            }
+
+            creatingGridTwo();
+        }
     })
 
     reSizingBig.addEventListener('click', () => {
-        containOutputs.removeChild(wrapThis);
-        creatingGridThree();
-    })
+        if(containOutputs.querySelector('.Grid-64') === null && containOutputs.querySelector('.Grid-32') === null && containOutputs.querySelector('.Grid-16') === null){
+            creatingGridThree();
+        } else if (containOutputs.querySelector('.Grid-64') === null && containOutputs.querySelector('.Grid-16') !== null){
+            if (containOutputs.contains(createGridA)){
+                containOutputs.removeChild(createGridA);
+            }
+
+            creatingGridThree();
+        } else if (containOutputs.querySelector('.Grid-64') === null && containOutputs.querySelector('Grid-32') !== null ){
+            if (containOutputs.contains(createGridB)){
+                containOutputs.removeChild(createGridB);
+            }
+            
+            creatingGridThree();
+        }
+    });
 
 }
 
 callGrid();
-
-const wrapThis = document.createElement('div');
-
-
-function creatingGridTwo() {
-
-    wrapThis.classList.add('Grid-32');
-    wrapThis.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 628px; width: 628px;';
-    
-    for (let i = 0; i < 32; i++) {
-        const row = document.createElement('div');
-        row.classList.add('grid-rows');
-        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
-
-        for(let p = 0; p < 32; p++ ) {
-            const boxes = document.createElement('div');
-            boxes.style.cssText = boxStyle
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.backgroundColor = 'black';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-            row.appendChild(boxes);
-        }
-        wrapThis.appendChild(row);
-    }
-    containOutputs.appendChild(wrapThis);
-
-}
-
-const newWrapThis = document.createElement('div');
-
-
-function creatingGridThree() {
-
-    newWrapThis.classList.add('Grid-64');
-    newWrapThis.style.cssText = 'display: flex; border: 4px solid red; flex-direction: column; background-color: white; height: 628px; width: 628px;';
-    
-    for (let i = 0; i < 64; i++) {
-        const row = document.createElement('div');
-        row.classList.add('grid-rows');
-        row.style.cssText ='display: flex; flex-direction: row; flex: 1;';
-
-        for(let p = 0; p < 64; p++ ) {
-            const boxes = document.createElement('div');
-            boxes.style.cssText = boxStyle
-            boxes.addEventListener('mouseenter', () => {
-                boxes.style.backgroundColor = 'black';
-            })
-            boxes.addEventListener('click', () => {
-                boxes.style.cssText = boxStyle;
-            })
-            row.appendChild(boxes);
-        }
-        newWrapThis.appendChild(row);
-    }
-    containOutputs.appendChild(newWrapThis);
-
-}
-
-
-
-
 
 
 
