@@ -7,7 +7,7 @@ const containOutputs = document.querySelector('.contain-outputs');
 
 const container = document.querySelector('.sketchPad');
 
-
+let currentGrid = null
 
 
 const createGridA = document.createElement('div');
@@ -37,6 +37,7 @@ function creatingGridOne() {
         createGridA.appendChild(row);
     }
     containOutputs.appendChild(createGridA);
+    currentGrid = createGridA;
 
 }
 
@@ -69,6 +70,8 @@ function creatingGridTwo() {
         createGridB.appendChild(row);
     }
     containOutputs.appendChild(createGridB);
+    currentGrid = createGridB;
+
 
 }
 
@@ -99,7 +102,7 @@ function creatingGridThree() {
         createGridC.appendChild(row);
     }
     containOutputs.appendChild(createGridC);
-
+    currentGrid = createGridC;
 }
     
 
@@ -141,27 +144,26 @@ buttonControls.appendChild(sizingButtons);
 
 
 function removeOldGrid() {
-    const oldGrid = containOutputs.querySelector('.Grid');
-    if (oldGrid) {
-      containOutputs.removeChild(oldGrid);
+    if (currentGrid) {
+      containOutputs.removeChild(currentGrid);
+      currentGrid = null;
     }
 }
-
-reSizingSmall.addEventListener('click', () => {
+  
+  reSizingSmall.addEventListener('click', () => {
     removeOldGrid();
     creatingGridOne();
 });
   
-reSizingMedium.addEventListener('click', () => {
+  reSizingMedium.addEventListener('click', () => {
     removeOldGrid();
     creatingGridTwo();
 });
   
-reSizingBig.addEventListener('click', () => {
+  reSizingBig.addEventListener('click', () => {
     removeOldGrid();
-    creatingGridThree(); 
+    creatingGridThree();
 });
-
 
 const resetButton = document.createElement('button');
 resetButton.classList.add('reset');
